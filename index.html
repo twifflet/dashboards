@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Health Dashboards — Tiffany Williams</title>
+<style>
+  :root{
+    --cream:#f7f3ec; --parchment:#efe8d8; --sage:#7a9e7e; --moss:#4a7055;
+    --deepMoss:#2d4a35; --sageLight:#b8d4bc; --charcoal:#2c2c2a;
+    --warmGrey:#6b6860; --gold:#c4a882; --border:rgba(74,112,85,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:system-ui,sans-serif;
+    background:var(--cream);
+    background-image:radial-gradient(circle at 20% 0%,rgba(122,158,126,0.08),transparent 55%),
+                     radial-gradient(circle at 90% 100%,rgba(196,168,130,0.10),transparent 50%);
+    color:var(--charcoal); min-height:100vh;
+  }
+  .band{background:var(--deepMoss);padding:2.6rem 2rem 2.3rem;}
+  .band-inner{max-width:780px;margin:0 auto;}
+  .eyebrow{
+    font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--sageLight);font-weight:500;opacity:0.85;margin-bottom:0.6rem;
+  }
+  h1{
+    font-family:Georgia,serif;font-size:2rem;font-weight:300;color:#fff;
+    letter-spacing:0.02em;line-height:1.2;
+  }
+  .sub{font-size:0.74rem;color:var(--sageLight);margin-top:0.45rem;opacity:0.72;font-weight:300;}
+  .wrap{max-width:780px;margin:0 auto;padding:2rem 1.25rem 3rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:0.85rem;}
+  a.card{
+    display:block;text-decoration:none;color:inherit;
+    background:#fff;border:1px solid var(--border);border-left:3px solid var(--sage);
+    border-radius:7px;padding:1.15rem 1.25rem;
+    transition:transform .18s ease,box-shadow .18s ease,border-left-color .18s ease;
+    opacity:0;transform:translateY(10px);animation:rise .5s ease forwards;
+  }
+  a.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(45,74,53,0.12);border-left-color:var(--gold);}
+  a.card:nth-child(1){animation-delay:.05s;}
+  a.card:nth-child(2){animation-delay:.13s;}
+  a.card:nth-child(3){animation-delay:.21s;}
+  a.card:nth-child(4){animation-delay:.29s;}
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+  .cat{font-size:0.6rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--warmGrey);font-weight:500;margin-bottom:0.3rem;}
+  .name{font-family:Georgia,serif;font-size:1.22rem;font-weight:400;color:var(--deepMoss);margin-bottom:0.35rem;}
+  .desc{font-size:0.74rem;color:var(--charcoal);line-height:1.55;opacity:0.82;}
+  .arrow{margin-top:0.7rem;font-size:0.68rem;letter-spacing:0.05em;color:var(--moss);font-weight:500;}
+  .lock{font-size:0.62rem;color:var(--warmGrey);margin-top:1.6rem;text-align:center;font-style:italic;}
+  .foot{
+    font-size:0.62rem;color:var(--warmGrey);background:var(--parchment);
+    border:1px solid var(--border);border-radius:6px;padding:0.7rem 0.9rem;
+    margin-top:1.5rem;line-height:1.6;font-style:italic;text-align:center;
+  }
+</style>
+</head>
+<body>
+  <div class="band">
+    <div class="band-inner">
+      <div class="eyebrow">Personal Health Record — Private Reference</div>
+      <h1>Health Dashboards</h1>
+      <div class="sub">Tiffany Williams — DOB 31/03/1992</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="medical-history.html">
+        <div class="cat">Overview</div>
+        <div class="name">Medical History</div>
+        <div class="desc">Diagnosed conditions, current medications &amp; supplements, persisting symptoms, and family history — with patient context.</div>
+        <div class="arrow">Open →</div>
+      </a>
+      <a class="card" href="blood-test.html">
+        <div class="cat">Bloodwork</div>
+        <div class="name">Blood Test Dashboard</div>
+        <div class="desc">Panels and trends from Jul 2021 to Jan 2026, with flags, gaps, and the cortisol awakening response.</div>
+        <div class="arrow">Open →</div>
+      </a>
+      <a class="card" href="genetic.html">
+        <div class="cat">Genomics</div>
+        <div class="name">Genetic Dashboard</div>
+        <div class="desc">Whole-genome variants and their functional relevance across the autonomic, hormonal, and metabolic picture.</div>
+        <div class="arrow">Open →</div>
+      </a>
+      <a class="card" href="sleep-study.html">
+        <div class="cat">Sleep</div>
+        <div class="name">Sleep Study Dashboard</div>
+        <div class="desc">Polysomnography findings, periodic limb movement data, and sleep architecture notes.</div>
+        <div class="arrow">Open →</div>
+      </a>
+    </div>
+
+    <div class="lock">🔒 Each dashboard is individually password-protected — you'll be asked for the password when opening one.</div>
+
+    <div class="foot">Personal reference only — not a diagnostic tool — all findings should be discussed with qualified clinicians — Tiffany Williams — 2026</div>
+  </div>
+</body>
+</html>
